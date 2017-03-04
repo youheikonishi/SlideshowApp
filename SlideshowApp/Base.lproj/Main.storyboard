@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,36 +19,35 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJm-z0-Ny5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EJm-z0-Ny5">
+                                <rect key="frame" x="60" y="54" width="360" height="243"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="243" id="Zfp-dW-pQb"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="8OQ-a5-Q0Z" appends="YES" id="N8B-MQ-LdF"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq7-Pn-CdI">
-                                <rect key="frame" x="164" y="427" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq7-Pn-CdI">
+                                <rect key="frame" x="224.5" y="318" width="31" height="30"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6qj-Z7-bis"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4S-f0-0zl">
-                                <rect key="frame" x="56" y="427" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4S-f0-0zl">
+                                <rect key="frame" x="56" y="318" width="46" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TEU-3Z-xo9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RQ-hP-tFW">
-                                <rect key="frame" x="265" y="427" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RQ-hP-tFW">
+                                <rect key="frame" x="389" y="318" width="31" height="30"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nen-Ct-Jtw"/>
@@ -55,6 +55,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rq7-Pn-CdI" firstAttribute="top" secondItem="EJm-z0-Ny5" secondAttribute="bottom" constant="21" id="0ti-ii-T8J"/>
+                            <constraint firstItem="P4S-f0-0zl" firstAttribute="leading" secondItem="EJm-z0-Ny5" secondAttribute="leading" id="5v2-2r-tvL"/>
+                            <constraint firstItem="3RQ-hP-tFW" firstAttribute="top" secondItem="EJm-z0-Ny5" secondAttribute="bottom" constant="21" id="9uJ-bn-2XK"/>
+                            <constraint firstItem="EJm-z0-Ny5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KxQ-Z0-EqA"/>
+                            <constraint firstItem="EJm-z0-Ny5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="L4n-fR-Pak"/>
+                            <constraint firstItem="P4S-f0-0zl" firstAttribute="top" secondItem="EJm-z0-Ny5" secondAttribute="bottom" constant="21" id="TiU-i5-K6j"/>
+                            <constraint firstItem="EJm-z0-Ny5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="ZPD-ip-HPm"/>
+                            <constraint firstItem="3RQ-hP-tFW" firstAttribute="trailing" secondItem="EJm-z0-Ny5" secondAttribute="trailing" id="kgT-hg-Wc8"/>
+                            <constraint firstItem="rq7-Pn-CdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nw6-vV-mPu"/>
+                            <constraint firstItem="EJm-z0-Ny5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="ref-gp-opT"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="back" destination="P4S-f0-0zl" id="gaA-bO-Kzk"/>
@@ -70,7 +82,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-167" y="170"/>
+            <point key="canvasLocation" x="-167.19999999999999" y="169.56521739130437"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Csa-TW-ZGy">
@@ -81,7 +93,7 @@
                         <viewControllerLayoutGuide type="bottom" id="X5Z-ij-1gh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dXq-rK-rkj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wsX-Rw-03D">
@@ -91,7 +103,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrH-7l-dfh">
                                 <rect key="frame" x="164" y="565" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="q5V-6l-brw" kind="unwind" unwindAction="unwindWithSegue:" id="XrL-PR-vpx"/>
                                 </connections>
