@@ -15,6 +15,7 @@
 		04A90A9A1E69EA94001ED30D /* ダウンロード1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 04A90A971E69EA94001ED30D /* ダウンロード1.jpeg */; };
 		04A90A9B1E69EA94001ED30D /* ダウンロード2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 04A90A981E69EA94001ED30D /* ダウンロード2.jpeg */; };
 		04A90A9C1E69EA94001ED30D /* ダウンロード3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 04A90A991E69EA94001ED30D /* ダウンロード3.jpeg */; };
+		04A90ADA1E6A8CAC001ED30D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A90AD91E6A8CAC001ED30D /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		04A90A971E69EA94001ED30D /* ダウンロード1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ダウンロード1.jpeg"; sourceTree = "<group>"; };
 		04A90A981E69EA94001ED30D /* ダウンロード2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ダウンロード2.jpeg"; sourceTree = "<group>"; };
 		04A90A991E69EA94001ED30D /* ダウンロード3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ダウンロード3.jpeg"; sourceTree = "<group>"; };
+		04A90AD91E6A8CAC001ED30D /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				04A90A851E69EA7A001ED30D /* AppDelegate.swift */,
 				04A90A871E69EA7A001ED30D /* ViewController.swift */,
+				04A90AD91E6A8CAC001ED30D /* ResultViewController.swift */,
 				04A90A891E69EA7A001ED30D /* Main.storyboard */,
 				04A90A8C1E69EA7A001ED30D /* Assets.xcassets */,
 				04A90A8E1E69EA7A001ED30D /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			files = (
 				04A90A881E69EA7A001ED30D /* ViewController.swift in Sources */,
 				04A90A861E69EA7A001ED30D /* AppDelegate.swift in Sources */,
+				04A90ADA1E6A8CAC001ED30D /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +316,7 @@
 				04A90A961E69EA7A001ED30D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

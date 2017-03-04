@@ -63,6 +63,13 @@ class ViewController: UIViewController {
         }
         imageView.image = UIImage(named: "ダウンロード\(suu).jpeg")
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultViewController: ResultViewController = segue.destination as! ResultViewController
+        resultViewController.imageView2?.image = UIImage(named: "ダウンロード\(suu).jpeg")
+    }
+    @IBAction func onTapImage(_ sender: Any) {
+        performSegue(withIdentifier: "toResultViewController", sender: nil)
+    }
 
 
 }

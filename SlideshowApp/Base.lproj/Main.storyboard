@@ -21,9 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJm-z0-Ny5">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJm-z0-Ny5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8OQ-a5-Q0Z" appends="YES" id="N8B-MQ-LdF"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq7-Pn-CdI">
                                 <rect key="frame" x="164" y="427" width="46" height="30"/>
@@ -56,11 +60,49 @@
                         <outlet property="back" destination="P4S-f0-0zl" id="gaA-bO-Kzk"/>
                         <outlet property="go" destination="3RQ-hP-tFW" id="EMg-xA-bq7"/>
                         <outlet property="imageView" destination="EJm-z0-Ny5" id="zy4-Qm-d9R"/>
+                        <segue destination="zWf-up-Krr" kind="show" identifier="toResultViewController" id="IgE-fj-UwZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8OQ-a5-Q0Z">
+                    <connections>
+                        <action selector="onTapImage:" destination="BYZ-38-t0r" id="2DX-EH-STl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-167" y="170"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="Csa-TW-ZGy">
+            <objects>
+                <viewController id="zWf-up-Krr" customClass="ResultViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WRh-vi-6nQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="X5Z-ij-1gh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dXq-rK-rkj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wsX-Rw-03D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="515"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrH-7l-dfh">
+                                <rect key="frame" x="164" y="565" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView2" destination="wsX-Rw-03D" id="6A2-o5-kXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jew-4p-wLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557.60000000000002" y="155.17241379310346"/>
         </scene>
     </scenes>
 </document>
