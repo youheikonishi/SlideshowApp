@@ -9,11 +9,12 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView2: UIImageView!
+    var image = UIImage(named: "ダウンロード1.jpeg")
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView2.image = 
+        imageView2.image = image
         // Do any additional setup after loading the view.
     }
 
