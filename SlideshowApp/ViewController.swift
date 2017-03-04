@@ -70,7 +70,8 @@ class ViewController: UIViewController {
     @IBAction func onTapImage(_ sender: Any) {
         performSegue(withIdentifier: "toResultViewController", sender: nil)
     }
-
-
+    @IBAction func unwind(segue: UIStoryboardSegue){
+    
+    }
 }
 
