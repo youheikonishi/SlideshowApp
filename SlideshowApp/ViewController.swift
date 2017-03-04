@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     var suu = 1
+    var timer: Timer!
+    @IBOutlet weak var back: UIButton!
+    @IBOutlet weak var go: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +32,28 @@ class ViewController: UIViewController {
         }
         imageView.image = UIImage(named: "ダウンロード\(suu).jpeg")
     }
-    @IBAction func startButton(_ sender: Any) {
-        Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideshow),userInfo: nil, repeats: true)
+    @IBAction func startButton(_ sender: UIButton) {
+        if self.timer == nil{
+        self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideshow),userInfo: nil, repeats: true)
+            sender.setTitle("停止",for: .normal)
+            back.isEnabled = false
+            go.isEnabled = false
+        }
+            else{
+                self.timer.invalidate()
+                sender.setTitle("再生",for: .normal)
+                sender.isEnabled = true
+                back.isEnabled = true
+                go.isEnabled = true
+        }
+        
     }
-    @IBAction func goButton(_ sender: Any) {
+    @IBAction func goButton(_ sender: UIButton) {
         suu += 1
         if suu >= 4 {
             suu = 1
         }
+        
         imageView.image = UIImage(named: "ダウンロード\(suu).jpeg")
     }
     func slideshow(timer: Timer){

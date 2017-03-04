@@ -53,6 +53,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="back" destination="P4S-f0-0zl" id="gaA-bO-Kzk"/>
+                        <outlet property="go" destination="3RQ-hP-tFW" id="EMg-xA-bq7"/>
                         <outlet property="imageView" destination="EJm-z0-Ny5" id="zy4-Qm-d9R"/>
                     </connections>
                 </viewController>
