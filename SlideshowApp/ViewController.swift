@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var go: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var start: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -67,7 +68,11 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController: ResultViewController = segue.destination as! ResultViewController
         resultViewController.image = UIImage(named: "ダウンロード\(suu).jpeg")
-        self.timer.invalidate()
+        if self.timer != nil{
+            self.timer.invalidate()
+            self.timer = nil
+            start.setTitle("再生", for: .normal)
+        }
     }
     @IBAction func onTapImage(_ sender: Any) {
         performSegue(withIdentifier: "toResultViewController", sender: nil)
