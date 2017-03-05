@@ -45,6 +45,7 @@ class ViewController: UIViewController {
                 sender.isEnabled = true
                 back.isEnabled = true
                 go.isEnabled = true
+                self.timer = nil
         }
         
     }
@@ -66,6 +67,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController: ResultViewController = segue.destination as! ResultViewController
         resultViewController.image = UIImage(named: "ダウンロード\(suu).jpeg")
+        self.timer.invalidate()
     }
     @IBAction func onTapImage(_ sender: Any) {
         performSegue(withIdentifier: "toResultViewController", sender: nil)
